@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.9.2",
+    "nodemon": "^2.0.21"
+  },
+  "scripts": {
+    "watch": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "name": "mongolicious",
+  "description": "An api for a social network that uses a NOSQL database",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xavionstar/MongoLicious.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xavionstar/MongoLicious/issues"
+  },
+  "homepage": "https://github.com/Xavionstar/MongoLicious#readme"
+}
