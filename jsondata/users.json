@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "642a49628e2c11975b2df5c8"
+  },
+  "userName": "Richie",
+  "email": "Richie@dogg.com",
+  "thoughts": [
+    {
+      "$oid": "642a527ee8d7dbfdad6947b7"
+    },
+    {
+      "$oid": "642a528be8d7dbfdad6947bb"
+    },
+    {
+      "$oid": "642a5296e8d7dbfdad6947bf"
+    }
+  ],
+  "friends": [
+    {
+      "$oid": "642a4cd3eea8d99a6db93b2c"
+    }
+  ],
+  "__v": 13
+},{
+  "_id": {
+    "$oid": "642a4c63eea8d99a6db93b26"
+  },
+  "userName": "Lane",
+  "email": "Lane@lane.com",
+  "thoughts": [
+    {
+      "$oid": "642a52cae8d7dbfdad6947c5"
+    },
+    {
+      "$oid": "642a52d8e8d7dbfdad6947c9"
+    }
+  ],
+  "friends": [
+    {
+      "$oid": "642a49628e2c11975b2df5c8"
+    }
+  ],
+  "__v": 3
+},{
+  "_id": {
+    "$oid": "642a4cd3eea8d99a6db93b2c"
+  },
+  "userName": "Linc",
+  "email": "Linc@lane.com",
+  "thoughts": [
+    {
+      "$oid": "642a52e7e8d7dbfdad6947cd"
+    },
+    {
+      "$oid": "642a52fee8d7dbfdad6947d1"
+    }
+  ],
+  "friends": [],
+  "__v": 2
+},{
+  "_id": {
+    "$oid": "642a4d32eea8d99a6db93b32"
+  },
+  "userName": "Jeff",
+  "email": "jeff@lane.com",
+  "thoughts": [],
+  "friends": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6430cc7ac78230f299422340"
+  },
+  "userName": "Brian",
+  "email": "Brianb@dickie.com",
+  "thoughts": [],
+  "friends": [],
+  "__v": 0
+}]

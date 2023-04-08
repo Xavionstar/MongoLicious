@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
-const url = 'mongodb://127.0.0.1:27017/MongoLicious';
+const url = 'mongodb://127.0.0.1:27017/My_Two_Cents';
 const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
 const router= require('./routes/index')
 
