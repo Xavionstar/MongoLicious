@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const opts = { timestamps: true, toJSON: { virtuals: true } };
 const reactionSchema = new mongoose.Schema({    
     text: { type: String, required: true, minLength: 1, maxLength: 280},
     user: { type: String, ref: 'User', required: true  }
@@ -17,29 +17,20 @@ const thoughtsSchema = new mongoose.Schema(
       minLength: 1,
       maxLength: 280,
     },
-
-    createdAt: {
-      type: Date,
-      get: function (date) {
-        return date ? date.toDateString() : "";
-      },
-    },
-    updatedAt: {
-      type: Date,
-      get: function (date) {
-        return date ? date.toDateString() : "";
-      },
-    },
+    
     userName: {
       type: String,
       required: true,
       ref: "User",
     },
     reactions: [reactionSchema]
-  },
-
+  },  opts
+   
+    
 );
-
+thoughtsSchema.virtual('reactionCount').get(function() {
+  return this.reactions.length;
+});
   
 
 const Thoughts = mongoose.model("Thoughts", thoughtsSchema);

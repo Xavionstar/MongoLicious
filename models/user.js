@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Thoughts = require('./thoughts')
-
+const opts = { toJSON: { virtuals: true } };
 const userSchema = new mongoose.Schema(
     {
         userName: {
@@ -11,7 +11,13 @@ const userSchema = new mongoose.Schema(
         },
         
 
-        email : String,
+        email : {
+            type: String,
+            required: true,
+            unique: true,
+            match: [/.+@.+\..+/, 'Must match an email address!'],
+        },
+
         thoughts : {
             type: [mongoose.SchemaTypes.ObjectId],
             ref: "Thoughts"
@@ -20,8 +26,13 @@ const userSchema = new mongoose.Schema(
             type: [mongoose.SchemaTypes.ObjectId],
             ref: "User",
         }
-    });
-   
+       
+    }, 
+    opts
+    );
+    userSchema.virtual('friendCount').get(function() {
+        return this.friends.length;
+      });
 
 const User = mongoose.model('User', userSchema);
 
